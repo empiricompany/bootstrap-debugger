@@ -1,14 +1,3 @@
-{doc_info DOCTYPE="HTML5"}
-{doc_info css="bootstrap3/bootstrap.min.css" external="true"}
-{doc_info css="bootstrap3/bootstrap-theme.min.css" external="true"}
-{doc_info code="bootstrap3/bootstrap.min.js"}
-{doc_info css="layout.css" external="true"}
-{doc_info css="style.css" external="true"}
-{doc_info css="http://fonts.googleapis.com/css?family=Oxygen:400,700" external="true"}
-
-{doc_raw}
-{literal}
-<script>
 var currentBootstrapBreakPoint;	
 (function( $ ) {
 	function findBootstrapBreakPoints(e) {
@@ -123,7 +112,3 @@ var currentBootstrapBreakPoint;
 	});	
 	
 }( jQuery ));
-</script>
-
-{/literal}
-{/doc_raw}
