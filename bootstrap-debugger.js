@@ -21,7 +21,11 @@
 				var styleLabel = 'color:#00ff00; font-weight:bold; padding-right: 5px; text-align: right; font-family: monospace;';
 				var styleValue = ' font-family: monospace;';
 				var brHtml = '<br />';				
-				var infoHtml = '<table>' +
+				var infoHtml = '<div style="position:relative">' +
+				'<div class="move moveTop" style="text-align:center;;cursor:pointer;">▲</div>' +
+				'<div class="move moveLeft" style="position:absolute;top:50%;;cursor:pointer;">◀</div>' +
+				'<div class="move moveRight" style="position:absolute;top:50%;right:0;cursor:pointer;">▶</div>' +					
+				'<table style="clear:both;">' +
 					'<tr><td colspan="2" style="text-align: center; color: #ffff00;font-weight: bold; font-family: monospace; font-size: 14px;">responsive debugger</td></tr>' +
 					'<tr>' +
 						'<td style="'+styleLabel+'">' +				
@@ -55,12 +59,42 @@
 							 $(window).scrollTop() + 'px' +
 						'</td>' +													
 					'</tr>' +
-				'</table>';	
+				'</table>' + 													
+				'<div class="move moveBottom" style="text-align:center;;cursor:pointer;">▼</div>' +								
+				'</div>';	
 				$('.mode-informer').html(infoHtml);
 				return env;
 			}
 		};
 	}
+	
+	$('.moveLeft').live('click', function(){
+		$('.mode-informer').css({
+			left: 10,
+			right: 'auto'
+		});
+	});
+	
+	$('.moveRight').live('click', function(){
+		$('.mode-informer').css({
+			left: 'auto',
+			right: 10
+		});
+	});
+	
+	$('.moveTop').live('click', function(){
+		$('.mode-informer').css({
+			top: 10,
+			bottom: 'auto',
+		});
+	});
+	
+	$('.moveBottom').live('click', function(){
+		$('.mode-informer').css({
+			top: 'auto',
+			bottom: 10,
+		});
+	});			
 	
 	$(window).resize(function(e){
 		findBootstrapBreakPoints(e);
