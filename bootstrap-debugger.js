@@ -22,9 +22,9 @@
 				var styleValue = ' font-family: monospace;';
 				var brHtml = '<br />';				
 				var infoHtml = '<div style="position:relative">' +
-				'<div class="move moveTop" style="text-align:center;;cursor:pointer;">▲</div>' +
-				'<div class="move moveLeft" style="position:absolute;top:50%;;cursor:pointer;">◀</div>' +
-				'<div class="move moveRight" style="position:absolute;top:50%;right:0;cursor:pointer;">▶</div>' +					
+				'<div class="move moveTop" style="text-align:center;;cursor:pointer;color:red;">▲</div>' +
+				'<div class="move moveLeft" style="position:absolute;top:50%;;cursor:pointer;color:red;">◀</div>' +
+				'<div class="move moveRight" style="position:absolute;top:50%;right:0;cursor:pointer;color:red;">▶</div>' +					
 				'<table style="clear:both;">' +
 					'<tr><td colspan="2" style="text-align: center; color: #ffff00;font-weight: bold; font-family: monospace; font-size: 14px;">responsive debugger</td></tr>' +
 					'<tr>' +
@@ -60,7 +60,7 @@
 						'</td>' +													
 					'</tr>' +
 				'</table>' + 													
-				'<div class="move moveBottom" style="text-align:center;;cursor:pointer;">▼</div>' +								
+				'<div class="move moveBottom" style="text-align:center;;cursor:pointer;color:red;">▼</div>' +								
 				'</div>';	
 				$('.mode-informer').html(infoHtml);
 				return env;
