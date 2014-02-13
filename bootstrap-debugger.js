@@ -1,48 +1,9 @@
 var currentBootstrapBreakPoint;	
+var version;
 (function( $ ) {
-	function findBootstrapBreakPoints(e) {
-		var envs = ['xs', 'sm', 'md', 'lg'];
-		var envs2 = ['phone', 'tablet', 'desktop'];
-		var version;
-		$el = $('<div>');
-		$el.appendTo($('body'));
 	
-		for (var i = envs.length - 1; i >= 0; i--) {
-			var env = envs[i];
-			$el.addClass('hidden-'+env);
-			if ($el.is(':hidden')) {
-				$el.remove();
-				try {
-					console.log(env2);					
-					console.log(env);
-				}catch(Exception){
-					
-				}
-				if(env){
-					currentBootstrapBreakPoint = env;
-					version = '3.x';
-				}
-			}
-		}
-		if(!version){
-			for (var i = envs2.length - 1; i >= 0; i--) {
-				var env2 = envs2[i];
-				$el.addClass('hidden-'+env2);
-				if ($el.is(':hidden')) {
-					$el.remove();
-					try {
-						console.log(env2);					
-					}catch(Exception){
-						
-					}
-					if(env2){
-						currentBootstrapBreakPoint = env2;
-						version = '2.x';					
-					}
-				}
-			}
-		}
-				
+	
+	function printInfo() {
 		var styleLabel = 'font-size:13px; color:#00ff00; font-weight:bold; padding-right: 5px; text-align: right; font-family: monospace;';
 		var styleValue = 'font-size:13px; font-family: monospace; color:#ffffff;';
 		var brHtml = '<br />';				
@@ -98,8 +59,6 @@ var currentBootstrapBreakPoint;
 		'<div class="move moveBottom" style="text-align:center;;cursor:pointer;color:red;">▼</div>' +								
 		'</div>';	
 		$('.mode-informer').html(infoHtml);
-			
-		return currentBootstrapBreakPoint;
 	}
 	
 	$('.moveLeft').live('click', function(){
@@ -128,8 +87,62 @@ var currentBootstrapBreakPoint;
 			top: 'auto',
 			bottom: 10,
 		});
-	});			
+	});		
 	
+	function findBootstrapBreakPoints(e) {
+		if(version == '3.x' || !version){
+			console.log('check 3');
+			var envs = ['xs', 'sm', 'md', 'lg'];
+			$el = $('<div>');
+			$el.appendTo($('body'));
+			for (var i = envs.length - 1; i >= 0; i--) {
+				var env = envs[i];
+				$el.addClass('hidden-'+env);
+				if ($el.is(':hidden')) {
+					$el.remove();
+					try {
+						console.log(env);
+					}catch(Exception){
+						
+					}
+					if(env){
+						currentBootstrapBreakPoint = env;
+						version = '3.x';
+						printInfo();
+						return env;					
+					}
+				}
+			}
+		}
+		
+		if(version == '2.x' || !version){
+			var envs = ['phone', 'tablet', 'desktop'];
+			$el = $('<div>');
+			$el.appendTo($('body'));
+		
+			for (var i = envs.length - 1; i >= 0; i--) {
+				var env = envs[i];
+				$el.addClass('hidden-'+env);
+				if ($el.is(':hidden')) {
+					$el.remove();
+					try {
+						console.log(env);
+					}catch(Exception){
+						
+					}
+					if(env){
+						currentBootstrapBreakPoint = env;
+						version = '2.x';
+						printInfo();
+						return env;
+					}
+				}
+			}
+		}
+		printInfo();
+		return;
+	}
+
 	$(window).resize(function(e){
 		findBootstrapBreakPoints(e);
 	});
