@@ -91,7 +91,6 @@ var version;
 	
 	function findBootstrapBreakPoints(e) {
 		if(version == '3.x' || !version){
-			console.log('check 3');
 			var envs = ['xs', 'sm', 'md', 'lg'];
 			$el = $('<div>');
 			$el.appendTo($('body'));
