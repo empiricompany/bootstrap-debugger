@@ -32,10 +32,10 @@ var version;
 				'</tr>' +
 				'<tr>' +
 					'<td style="'+styleLabel+'">' +				
-						'.content' +
+						'.container' +
 					'</td>' +	
 					'<td style="'+styleValue+'">' +							
-						 $('.content').width() + 'px' +	
+						 $('.container').width() + 'px' +	
 					'</td>' +							
 				'</tr>' +
 				'<tr>';
