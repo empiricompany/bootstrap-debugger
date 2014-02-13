@@ -30,6 +30,14 @@ var version;
 						'@screen-'+currentBootstrapBreakPoint +						
 					'</td>' +							
 				'</tr>' +
+				'<tr>' +
+					'<td style="'+styleLabel+'">' +				
+						'.content' +
+					'</td>' +	
+					'<td style="'+styleValue+'">' +							
+						 $('.content').width() + 'px' +	
+					'</td>' +							
+				'</tr>' +
 				'<tr>';
 			}
 			infoHtml+= '<td style="'+styleLabel+'">' +					
