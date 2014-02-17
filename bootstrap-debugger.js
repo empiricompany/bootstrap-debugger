@@ -8,6 +8,7 @@ var version;
 		var styleValue = 'font-size:13px; font-family: monospace; color:#ffffff;';
 		var brHtml = '<br />';				
 		var infoHtml = '<div style="position:relative">' +
+		'<div class="move closeBox" style="position:absolute;right:5px;font-size:15px;cursor:pointer;color:red;font-weight:bold;">X</div>' +		
 		'<div class="move moveTop" style="text-align:center;;cursor:pointer;color:red;">▲</div>' +
 		'<div class="move moveLeft" style="position:absolute;top:50%;;cursor:pointer;color:red;">◀</div>' +
 		'<div class="move moveRight" style="position:absolute;top:50%;right:0;cursor:pointer;color:red;">▶</div>' +					
@@ -95,6 +96,10 @@ var version;
 			top: 'auto',
 			bottom: 10,
 		});
+	});		
+	
+	$('.closeBox').live('click', function(){
+		$('.mode-informer').hide();
 	});		
 	
 	function findBootstrapBreakPoints(e) {
