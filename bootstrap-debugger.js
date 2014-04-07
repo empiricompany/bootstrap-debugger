@@ -68,39 +68,39 @@ var version;
 		'<div class="move moveBottom" style="text-align:center;;cursor:pointer;color:red;">▼</div>' +								
 		'</div>';	
 		$('.mode-informer').html(infoHtml);
+		
+		$('.moveLeft').off('click').on('click', function(){
+			$('.mode-informer').css({
+					left: 10,
+					right: 'auto'
+				});
+		});
+		
+		$('.moveRight').off('click').on('click', function(){
+			$('.mode-informer').css({
+				left: 'auto',
+				right: 10
+			});
+		});
+		
+		$('.moveTop').off('click').on('click', function(){
+			$('.mode-informer').css({
+				top: 10,
+				bottom: 'auto',
+			});
+		});
+		
+		$('.moveBottom').off('click').on('click', function(){
+			$('.mode-informer').css({
+				top: 'auto',
+				bottom: 10,
+			});
+		});		
+		
+		$('.closeBox').off('click').on('click', function(){
+			$('.mode-informer').hide();
+		});		
 	}
-	
-	$('.moveLeft').on('click', function(){
-		$('.mode-informer').css({
-			left: 10,
-			right: 'auto'
-		});
-	});
-	
-	$('.moveRight').on('click', function(){
-		$('.mode-informer').css({
-			left: 'auto',
-			right: 10
-		});
-	});
-	
-	$('.moveTop').on('click', function(){
-		$('.mode-informer').css({
-			top: 10,
-			bottom: 'auto',
-		});
-	});
-	
-	$('.moveBottom').on('click', function(){
-		$('.mode-informer').css({
-			top: 'auto',
-			bottom: 10,
-		});
-	});		
-	
-	$('.closeBox').on('click', function(){
-		$('.mode-informer').hide();
-	});		
 	
 	function findBootstrapBreakPoints(e) {
 		if(version == '3.x' || !version){
