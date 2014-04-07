@@ -70,35 +70,35 @@ var version;
 		$('.mode-informer').html(infoHtml);
 	}
 	
-	$('.moveLeft').live('click', function(){
+	$('.moveLeft').on('click', function(){
 		$('.mode-informer').css({
 			left: 10,
 			right: 'auto'
 		});
 	});
 	
-	$('.moveRight').live('click', function(){
+	$('.moveRight').on('click', function(){
 		$('.mode-informer').css({
 			left: 'auto',
 			right: 10
 		});
 	});
 	
-	$('.moveTop').live('click', function(){
+	$('.moveTop').on('click', function(){
 		$('.mode-informer').css({
 			top: 10,
 			bottom: 'auto',
 		});
 	});
 	
-	$('.moveBottom').live('click', function(){
+	$('.moveBottom').on('click', function(){
 		$('.mode-informer').css({
 			top: 'auto',
 			bottom: 10,
 		});
 	});		
 	
-	$('.closeBox').live('click', function(){
+	$('.closeBox').on('click', function(){
 		$('.mode-informer').hide();
 	});		
 	
