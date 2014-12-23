@@ -47,8 +47,16 @@ The script add a simple overlay box with basic info that update on resize and sc
 </ul>
 <br />
 <strong>Extra feature:</strong> Show grid overlay
+<br />
 <p>Example run on jsbin <a href="http://jsbin.com/dekinova/2/" target="_blank">http://jsbin.com/dekinova/2/</a></p>
-
+Install bookmark ready:
+<script type="text/javascript">
+var dontClick = function() {
+alert("Drag this bookmark to install");
+return false;
+}; 
+</script>
+<a title="Bootstrap Debugger" class="btn btn-info" onclick="return dontClick();" id="bmletButton" href="javascript:(function()%20{%20%20%20var%20head%20=%20document.getElementsByTagName(&quot;head&quot;)[0];%20%20%20var%20bklScript%20=%20document.createElement(&quot;script&quot;);%20%20%20bklScript.type%20=%20&quot;text/javascript&quot;;%20%20%20bklScript.src%20=%20&quot;https://raw.githubusercontent.com/empiricompany/bootstrap-debugger/master/bootstrap-debugger.js&quot;;%20%20%20head.appendChild(bklScript);%20})();">Bootstrap Debugger</a>
 <p>Credits to detect breakpoints:
 <a href="http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api">http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api</a></p>
         </section>
