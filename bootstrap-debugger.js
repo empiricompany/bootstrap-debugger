@@ -205,7 +205,7 @@ var gutter;
 
 		$('<div />', { class: "row" }).css({height: '100%'}).appendTo('#grid-debugger .container');
 
-		if(version = '3.x'){
+		if(version == '3.x'){
 			classColumn = 'col-xs-1 col-sm-1 col-md-1 col-lg-1';
 			htmlColumn = '<div class="visible-xs">xs</div><div class="visible-sm">sm</div><div class="visible-md">md</div><div class="visible-lg">lg</div>';
 		}else{
