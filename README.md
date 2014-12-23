@@ -13,6 +13,9 @@ The script add a simple overlay box with basic info that update on resize and sc
   <li>offsetTop:	window.offsetTop()</li>
 </ul>
 
+Extra feature:
+Show grid overlay
+
 GitHub Page: http://empiricompany.github.io/bootstrap-debugger
 
 Example run on jsbin: http://jsbin.com/dekinova/2/
