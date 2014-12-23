@@ -164,7 +164,7 @@ var gutter;
 				if ($el.is(':hidden')) {
 					$elGutter = $('<div>');
 					$elGutter.addClass('span1');
-					gutter = $elGutter.css('padding-left');
+					gutter = $elGutter.css('margin-left');
 					$el.remove();
 					try {
 						console.log(env);
@@ -234,6 +234,7 @@ var gutter;
 		//Adjust gutter
 		$('#grid-debugger .container .row > div').css({
 			'padding': 0,
+			'margin': 0,
 			'border-width': '0 '+gutter
 		}).hover(function(){
 			$(this).css('opacity', '0.75');
