@@ -20,7 +20,7 @@ GitHub Page: http://empiricompany.github.io/bootstrap-debugger
 
 Example run on jsbin: http://jsbin.com/kipeya/3/
 
-![Preview](https://raw.githubusercontent.com/empiricompany/bootstrap-debugger/master/bootstrap-debugger.gif)
+![Preview](https://raw.githubusercontent.com/empiricompany/bootstrap-debugger/gh-pages/images/bootstrap-debugger.gif)
 
 Credits to detect breakpoints:
 http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api
