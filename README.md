@@ -18,7 +18,7 @@ Show grid overlay
 
 GitHub Page: http://empiricompany.github.io/bootstrap-debugger
 
-Example run on jsbin: http://jsbin.com/kipeya/3/
+Example run on jsbin: https://output.jsbin.com/kipeya/8
 
 ![Preview](https://raw.githubusercontent.com/empiricompany/bootstrap-debugger/gh-pages/images/bootstrap-debugger.gif)
 
