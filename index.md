@@ -13,7 +13,7 @@ The script add a simple overlay box with basic info that update on resize and sc
   <li>offsetTop:	window.offsetTop()</li>
 </ul>
 
-Example run on jsbin http://jsbin.com/dekinova/2/
+Example run on jsbin https://output.jsbin.com/kipeya
 
 Credits to detect breakpoints:
 http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api
